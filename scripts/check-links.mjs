@@ -77,4 +77,7 @@ const loaded = results.length - warned - failed;
 console.log(
   `\nChecked ${results.length} link${results.length === 1 ? "" : "s"}: ${loaded} loaded, ${warned} turned the check away, ${failed} failed.`,
 );
-process.exit(failed ? 1 : 0);
+// exitCode rather than process.exit(): on Windows, exiting while fetch's
+// connections are still closing trips an assertion in libuv and crashes Node
+// after every result has already printed.
+process.exitCode = failed ? 1 : 0;
