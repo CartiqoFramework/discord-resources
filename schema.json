@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CartiqoFramework/discord-resources/blob/main/schema.json",
+  "title": "Discord resources",
+  "description": "The shape of resources.json. scripts/validate.mjs checks the same rules, plus duplicates and bot invite permissions.",
+  "type": "object",
+  "required": ["sections"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/section" }
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": ["id", "name", "entries"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Used as the section's anchor on the page."
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A caution for the whole section, shown above its entries."
+        },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/entry" }
+        }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "required": ["name", "url", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "url": { "type": "string", "pattern": "^https://" },
+        "description": { "type": "string", "minLength": 10, "maxLength": 400 }
+      }
+    }
+  }
+}

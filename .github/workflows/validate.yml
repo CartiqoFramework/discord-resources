@@ -1,0 +1,32 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Check the format
+        run: node scripts/validate.mjs
+
+      - name: Check the links this pull request adds
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git show "origin/$BASE_REF:resources.json" > "$RUNNER_TEMP/base.json"
+          node scripts/check-links.mjs --base "$RUNNER_TEMP/base.json"
