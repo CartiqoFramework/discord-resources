@@ -153,6 +153,11 @@
           "description": "Discord API library for Lua."
         },
         {
+          "name": "discord.lua",
+          "url": "https://github.com/filispeen/discord.lua",
+          "description": "Discord API library for Lua."
+        },
+        {
           "name": "DiscordPHP",
           "url": "https://github.com/discord-php/DiscordPHP",
           "description": "Discord API library for PHP."
