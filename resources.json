@@ -287,6 +287,11 @@
           "name": "BlancoKit",
           "url": "https://blancodagoat.dev/discord/",
           "description": "A suite of 35 browser-based Discord developer tools: snowflake, permissions, and intents decoders, embed, slash-command, and OAuth2 builders, and user, invite, and webhook lookups. No bot, no install."
+        },
+        {
+          "name": "UnixLi Discord Timestamp Generator",
+          "url": "https://unixli.com/discord-timestamp/",
+          "description": "Generates Discord timestamp tags (<t:unix:F>, :R and the other style flags) from a Unix time or an ISO date, in the browser."
         }
       ]
     },
