@@ -105,6 +105,11 @@
           "name": "Fear & Greed Index",
           "url": "https://discord.com/oauth2/authorize?client_id=1125794469829169253&scope=bot+applications.commands&permissions=67127296",
           "description": "Shows the Crypto Fear & Greed Index in the member list through its nickname and status, with slash commands for today's value, recent history and a comparison of data sources."
+        },
+        {
+          "name": "BabelBot",
+          "url": "https://babelbot.app",
+          "description": "Auto-translates Discord chat into 130+ languages and keeps slang and tone. Replies, threads, two-way language channels and voice chat. Free plan."
         }
       ]
     },
