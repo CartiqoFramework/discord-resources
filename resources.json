@@ -302,6 +302,11 @@
           "name": "UnixLi Discord Timestamp Generator",
           "url": "https://unixli.com/discord-timestamp/",
           "description": "Generates Discord timestamp tags (<t:unix:F>, :R and the other style flags) from a Unix time or an ISO date, in the browser."
+        },
+        {
+          "name": "EmoteSize",
+          "url": "https://emotesize.com/discord-emoji-resizer",
+          "description": "Free browser tools that resize and compress images and GIFs for Discord emoji and stickers, with files processed on your device and never uploaded."
         }
       ]
     },
