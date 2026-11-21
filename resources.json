@@ -110,6 +110,16 @@
           "name": "BabelBot",
           "url": "https://babelbot.app",
           "description": "Auto-translates Discord chat into 130+ languages and keeps slang and tone. Replies, threads, two-way language channels and voice chat. Free plan."
+        },
+        {
+          "name": "CARTIQO Bot",
+          "url": "https://bot.cartiqolabs.com/",
+          "description": "An all-in-one bot with a web dashboard: anti-nuke, raid lockdown, verification, moderation with evidence on every case, tickets with ModMail, levels, giveaways and more, in 30 languages."
+        },
+        {
+          "name": "Anchor",
+          "url": "https://anchor.cartiqolabs.com/",
+          "description": "Backs up a server's channels, roles and settings, and restores the server and brings verified members back after a nuke or a deleted server."
         }
       ]
     },
